@@ -1,0 +1,122 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <style>
+    body{
+margin:0;
+padding:0;
+font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+font-family: 'Patua One', cursive;
+}
+
+header {
+background:#27363f;
+width:100%;
+padding:40px 0;
+color:white;
+text-align:center;
+}
+
+a {
+text-decoration:none;
+color:inherit;
+}
+
+nav ul {
+background-color:#446274;
+overflow:hidden;
+color:white;
+padding:0;
+margin:0;
+text-align:center;
+-webkit-transition:max-height 0.4s;
+-ms-transition:max-height 0.4s;
+-moz-transition:max-height 0.4s;
+-o-transition:max-height 0.4s;
+transition:max-height 0.4s;
+}
+
+nav ul li {
+display:inline-block;
+padding:20px;
+}
+
+nav ul li:hover {
+background-color:#718e9e;
+}
+
+section {
+line-height: 1.5em;
+font-size:0.9em;
+padding:40px;
+width:75%;
+margin:0 auto;
+}
+
+.handle {
+  width:100%;
+  background: #446274;
+  text-align:left;
+  box-sizing:border-box;
+  padding:15px 10px;
+  cursor:pointer;
+  color:white;
+  display:none;
+}
+
+@media screen and (max-width:580px){
+
+nav ul {
+  max-height:0;
+}
+
+.showing {
+  max-height:20em;
+}
+nav ul li {
+  width:100%;
+  box-sizing:border-box;
+  padding:15px;
+  text-align:left;
+}
+
+.handle {
+  display:block;
+}
+
+
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Teste</h1>
+    </header>
+    <nav>
+        <ul>
+          <a href="/"><li>Home</li></a>
+          <a href="/login"><li>Login</li></a>
+          <a href="#"><li>Teste</li></a>
+          <a href="#"><li>Teste</li></a>
+        </ul>
+      <div class="handle">Menu</div>
+    </nav>
+    <section>
+        {{haha}}<br>
+        DB here
+    </section>
+   <script>
+     $('.handle').on('click', function(){
+       $('nav ul').toggleClass('showing');
+     });
+   </script>
+  </body>
+</html>
